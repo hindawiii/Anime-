@@ -1,0 +1,7 @@
+{
+  "name": "أوتاكو ساما | Otaku Sama",
+  "description": "تطبيق الأنمي والمانجا الفاخر للأوتاكو العرب بهوية ساما الداكنة وشريط الكاتانا التفاعلي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

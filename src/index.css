@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'A Banoo Light';
+  src: url('/fonts/A.Banoo-Light.ttf') format('truetype');
+  font-weight: 300 400 500 700 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'a banoo light';
+  src: url('/fonts/A.Banoo-Light.ttf') format('truetype');
+  font-weight: 300 400 500 700 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-banoo: 'A Banoo Light', 'a banoo light', 'Tajawal', sans-serif;
+    --font-english: 'Roboto', 'A Banoo Light', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'A Banoo Light', 'a banoo light', 'Tajawal', system-ui, sans-serif;
+    line-height: 1.625;
+    letter-spacing: -0.01em;
+  }
+
+  [dir="ltr"] {
+    font-family: 'Roboto', 'A Banoo Light', system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    letter-spacing: 0em;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B0B18;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #202038;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7C5CFF;
+  }
+}
+
+/* Otaku Sama Glow & Shimmer FX */
+@keyframes katanaGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(124, 92, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(124, 92, 255, 0.8));
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.katana-glow-violet {
+  filter: drop-shadow(0 0 8px rgba(124, 92, 255, 0.6));
+}
+
+.katana-glow-sakura {
+  filter: drop-shadow(0 0 8px rgba(255, 92, 138, 0.6));
+}
+
+.katana-glow-sky {
+  filter: drop-shadow(0 0 8px rgba(77, 216, 255, 0.6));
+}
+
+.katana-glow-gold {
+  filter: drop-shadow(0 0 8px rgba(255, 201, 77, 0.6));
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmerEffect 2s infinite;
+}
+
