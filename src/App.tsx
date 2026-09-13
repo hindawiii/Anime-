@@ -97,13 +97,13 @@ export default function App() {
           neonEnabled={neonEnabled}
         />
 
-        {/* Active Section Content (Completely Empty Shells) */}
-        <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 pt-5 pb-32">
+        {/* Active Section Content */}
+        <main className="flex-1 w-full max-w-5xl lg:max-w-6xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6 pb-32">
           {activeTab === 'anime' && <AnimeMangaSection />}
           {activeTab === 'wansa' && <WansaSection />}
           {activeTab === 'games' && <GamesSection />}
           {activeTab === 'arena' && <OtakuArenaSection />}
-          {activeTab === 'profile' && <ProfileSection />}
+          {activeTab === 'profile' && <ProfileSection lang={lang} />}
         </main>
 
         {/* Katana Sword Bottom Navigation Bar - Fixed & Docked at Bottom */}
@@ -115,7 +115,7 @@ export default function App() {
         />
       </div>
 
-      {/* Settings Drawer (with all requested buttons: Profile, About, Privacy, Clear Cache, Logout, etc.) */}
+      {/* Settings Drawer */}
       <SettingsDrawer
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}

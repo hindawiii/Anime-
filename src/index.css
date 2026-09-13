@@ -18,20 +18,26 @@
 
 @layer base {
   :root {
-    --font-banoo: 'A Banoo Light', 'a banoo light', 'Tajawal', sans-serif;
-    --font-english: 'Roboto', 'A Banoo Light', system-ui, sans-serif;
+    --font-cairo: 'Cairo', system-ui, sans-serif;
+    --font-roboto: 'Roboto', system-ui, sans-serif;
+    --font-banoo: 'A Banoo Light', 'a banoo light', 'Cairo', sans-serif;
   }
 
   [dir="rtl"] {
-    font-family: 'A Banoo Light', 'a banoo light', 'Tajawal', system-ui, sans-serif;
+    font-family: 'Cairo', 'A Banoo Light', system-ui, sans-serif;
     line-height: 1.625;
     letter-spacing: -0.01em;
   }
 
   [dir="ltr"] {
-    font-family: 'Roboto', 'A Banoo Light', system-ui, -apple-system, sans-serif;
+    font-family: 'Roboto', 'Cairo', system-ui, -apple-system, sans-serif;
     line-height: 1.55;
     letter-spacing: 0em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', 'Cairo', system-ui, sans-serif;
+    letter-spacing: -0.015em;
   }
 
   body {
